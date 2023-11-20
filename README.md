@@ -32,21 +32,6 @@ The inventory.ini file includes the IP addresses of my web and database servers:
 34.201.171.30
 
 
-
-Ansible Vault:
-Created secrets.yml file which includes sensitive information such as database username and password and then encrypted it with vault:
-ansible-vault create secrets.yml
-**The password for vault is: vault**
-
-You can read the content of secrets.yml file with decrypt function of vault:
-ansible-vault decrypt secrets.yml
-
-
-
-
-
-
-
 Running the Ansible Playbook
 
 Navigate to the playbook directory.
