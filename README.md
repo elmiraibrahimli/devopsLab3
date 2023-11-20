@@ -66,6 +66,7 @@ Screenshots:
 
 
 ![2](https://github.com/elmiraibrahimli/devopsLab3/assets/94115234/61773a3d-4d44-4317-8fee-9cfab6ecd0c3)
+![3](https://github.com/elmiraibrahimli/devopsLab3/assets/94115234/93040a2d-5fa6-41ff-8d8b-1ffec32469ce)
 
 
 Authors
