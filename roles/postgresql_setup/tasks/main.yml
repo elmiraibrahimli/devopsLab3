@@ -1,0 +1,27 @@
+---
+- name: Install PostgreSQL 15
+  yum:
+    name: postgresql15
+    state: present
+
+- name: Install PostgreSQL 15 Server
+  yum:
+    name: postgresql15-server
+    state: present
+
+- name: Find files in PostgreSQL data directory
+  find:
+    paths: /var/lib/pgsql/data
+    file_type: any
+  register: pg_data_dir_contents
+
+- name: Initialize PostgreSQL Database
+  command: /usr/bin/postgresql-setup initdb
+  when: pg_data_dir_contents.matched == 0
+
+- name: Enable and start PostgreSQL service
+  systemd:
+    name: postgresql
+    enabled: yes
+    state: started
+

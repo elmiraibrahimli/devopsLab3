@@ -1,0 +1,15 @@
+- hosts: database
+  become: yes
+  gather_facts: yes
+  vars_files:
+    - secrets.yml
+  roles:
+    - postgresql_setup
+
+- hosts: production
+  become: yes
+  vars_files:
+    - secrets.yml
+  roles:
+    - app
+

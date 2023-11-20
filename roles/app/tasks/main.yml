@@ -1,0 +1,15 @@
+---
+# tasks file for app on RedHat-based systems
+
+- name: Install Docker
+  yum:
+    name: docker
+    state: present
+
+- name: Pull and run the Docker container
+  docker_container:
+    name: myapp
+    image: elmiraibrahimli/devops3:latest
+    ports:
+      - "8080:8080"
+
